@@ -1,6 +1,5 @@
 {
     "appId": "com.example.electron-demo",
-    "productName": "React Electron App",
     "copyright": "PMTECH PVT. LTD.",
     "directories": {
         "buildResources": "assets"
@@ -9,35 +8,19 @@
         "build/**/*",
         "node_modules/**/*"
     ],
-    "dmg": {
-        "background": null,
-        "backgroundColor": "#ffffff",
-        "window": {
-            "width": "400",
-            "height": "300"
-        },
-        "contents": [
-            {
-                "x": 100,
-                "y": 100
-            },
-            {
-                "x": 300,
-                "y": 100,
-                "type": "link",
-                "path": "/Applications"
-            }
-        ]
+    "publish": {
+        "provider": "github"
     },
     "mac": {
-        "target": "dmg",
-        "category": "public.app-category.utilities"
-      },
+        "category": "public.app-category.productivity"
+    },
     "win": {
-        "target": "nsis"
+        "certificateFile": "private/prabudhmishra.pfx",
+        "certificatePassword": "",
+        "verifyUpdateCodeSignature": false,
+        "publisherName": "prabudhmishra"
     },
     "linux": {
-        "target": "AppImage",
         "category": "Utility"
     }
 }
